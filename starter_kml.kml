@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+<Document>
+    <Style id="z1">
+        <IconStyle>
+            <Icon>
+                <href>http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+            </Icon>
+        </IconStyle>
+    </Style>
+    <Folder>
+        <name>Department Buildings</name>
+        <Placemark>
+            <name>Cinematic Arts</name>
+            <styleUrl>#z1</styleUrl>
+            <Point><coordinates>-118.286,34.023</coordinates></Point>
+        </Placemark>
+        <Placemark>
+            <name>Art and Design</name>
+            <styleUrl>#z1</styleUrl>
+            <Point><coordinates>-118.287,34.019</coordinates></Point>
+        </Placemark>
+        <Placemark>
+            <name>Dance Center</name>
+            <styleUrl>#z1</styleUrl>
+            <Point><coordinates>-118.285,34.023</coordinates></Point>
+        </Placemark>
+    </Folder>
+    <Folder>
+        <name>Waterworks</name>
+        <Placemark>
+            <name>Bing Theatre</name>
+            <styleUrl>#z1</styleUrl>
+            <Point><coordinates>-118.285,34.022</coordinates></Point>
+        </Placemark>
+        <Placemark>
+            <name>Tommy Trojan</name>
+            <styleUrl>#z1</styleUrl>
+            <Point><coordinates>-118.285,34.02</coordinates></Point>
+        </Placemark>
+        <Placemark>
+            <name>Taper Hall</name>
+            <styleUrl>#z1</styleUrl>
+            <Point><coordinates>-118.283,34.022</coordinates></Point>
+        </Placemark>
+    </Folder>
+    <Folder>
+        <name>Eateries</name>
+        <Placemark>
+            <name>Dulce</name>
+            <styleUrl>#z1</styleUrl>
+            <Point><coordinates>-118.284,34.025</coordinates></Point>
+        </Placemark>
+        <Placemark>
+            <name>Kobunga</name>
+            <styleUrl>#z1</styleUrl>
+            <Point><coordinates>-118.285,34.025</coordinates></Point>
+        </Placemark>
+        <Placemark>
+            <name>Il Giardino</name>
+            <styleUrl>#z1</styleUrl>
+            <Point><coordinates>-118.284,34.025</coordinates></Point>
+        </Placemark>
+    </Folder>
+    <Folder>
+        <name>Libraries</name>
+        <Placemark>
+            <name>Doheny</name>
+            <styleUrl>#z1</styleUrl>
+            <Point><coordinates>-118.283,34.02</coordinates></Point>
+        </Placemark>
+        <Placemark>
+            <name>Leavey</name>
+            <styleUrl>#z1</styleUrl>
+            <Point><coordinates>-118.282,34.021</coordinates></Point>
+        </Placemark>
+        <Placemark>
+            <name>Uni Library</name>
+            <styleUrl>#z1</styleUrl>
+            <Point><coordinates>-118.283,34.021</coordinates></Point>
+        </Placemark>
+    </Folder>
+    <Placemark>
+        <name>Home</name>
+        <styleUrl>#z1</styleUrl>
+        <Point><coordinates>-118.288,34.027</coordinates></Point>
+    </Placemark>
+    <Placemark>
+        <name>Convex Hull</name>
+        <Polygon>
+            <extrude>1</extrude>
+            <altitudeMode>relativeToGround</altitudeMode>
+            <outerBoundaryIs>
+                <LinearRing>
+                    <coordinates>
+                        -118.287,34.019,100
+                        -118.288,34.027,100
+                        -118.284,34.025,100
+                        -118.282,34.021,100 
+                        -118.283,34.02,100
+                        -118.287,34.019,100
+                    </coordinates>
+                </LinearRing>
+            </outerBoundaryIs>
+        </Polygon>
+  </Placemark>
+  <Placemark>
+    <name>Nearest Neighbours</name>
+    <LineString>
+        <extrude>1</extrude>
+        <coordinates>
+        -118.288,34.027 -118.286,34.023
+        -118.288,34.027 -118.284,34.025
+        -118.288,34.027 -118.285,34.025
+        -118.288,34.027 -118.284,34.025
+        </coordinates>
+    </LineString>
+</Placemark>
+</Document>
+</kml>

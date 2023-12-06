@@ -1,0 +1,11 @@
+<script>
+    var R = 36 / 300, r = 9 / 300, a = 30 / 300;
+    var x, y;
+    for (var t = 0.0; t < Math.PI * 10; t += 0.01) {
+        x = (R + r) * Math.cos((r / R) * t) - a * Math.cos((1 + r / R) * t);
+        x = x*0.01 + 34.020;
+        y = (R + r) * Math.sin((r / R) * t) - a * Math.sin((1 + r / R) * t);
+        y = y*0.01 + -118.288;
+        document.write(y + "," + x + ",0<br>");
+    }
+</script>

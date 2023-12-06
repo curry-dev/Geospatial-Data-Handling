@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)https://bytes.usc.edu/cs585/f23-Da-taaa/hw/HW3/OL/OL.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>OL</title>
+<script src="./OL_files/OpenLayers.js.download">
+</script>
+<style>
+#map {
+    width:400px;
+    height:400px;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="./OL_files/style.css"></head>
+
+<body>
+<!-- <div id="map" class="olMap">
+        <div id="OpenLayers_Map_2_OpenLayers_ViewPort" class="olMapViewport olControlDragPanActive olControlZoomBoxActive olControlPinchZoomActive olControlNavigationActive" style="position: relative; overflow: hidden; width: 100%; height: 100%;">
+                <div id="OpenLayers_Map_2_OpenLayers_Container" style="position: absolute; z-index: 749; left: 0px; top: 0px;">
+                        <div id="OpenLayers_Layer_OSM_18" dir="ltr" class="olLayerDiv olLayerGrid" style="position: absolute; width: 100%; height: 100%; z-index: 100;">
+                                <img class="olTileImage" crossorigin="anonymous" src="./OL_files/101.png" style="visibility: inherit; opacity: 1; position: absolute; left: 177px; top: 97px; width: 256px; height: 256px;">
+                                <img class="olTileImage" crossorigin="anonymous" src="./OL_files/101(1).png" style="visibility: inherit; opacity: 1; position: absolute; left: -79px; top: 97px; width: 256px; height: 256px;">
+                                <img class="olTileImage" crossorigin="anonymous" src="./OL_files/100.png" style="visibility: inherit; opacity: 1; position: absolute; left: 177px; top: -159px; width: 256px; height: 256px;">
+                                <img class="olTileImage" crossorigin="anonymous" src="./OL_files/100(1).png" style="visibility: inherit; opacity: 1; position: absolute; left: -79px; top: -159px; width: 256px; height: 256px;">
+                                <img class="olTileImage" crossorigin="anonymous" src="./OL_files/102.png" style="visibility: inherit; opacity: 1; position: absolute; left: 177px; top: 353px; width: 256px; height: 256px;">
+                                <img class="olTileImage" crossorigin="anonymous" src="./OL_files/102(1).png" style="visibility: inherit; opacity: 1; position: absolute; left: -79px; top: 353px; width: 256px; height: 256px;">
+                                <img class="olTileImage" crossorigin="anonymous" src="./OL_files/101(2).png" style="visibility: inherit; opacity: 1; position: absolute; left: 433px; top: 97px; width: 256px; height: 256px;">
+                                <img class="olTileImage" crossorigin="anonymous" src="./OL_files/100(2).png" style="visibility: inherit; opacity: 1; position: absolute; left: 433px; top: -159px; width: 256px; height: 256px;">
+                                <img class="olTileImage" crossorigin="anonymous" src="./OL_files/102(2).png" style="visibility: inherit; opacity: 1; position: absolute; left: 433px; top: 353px; width: 256px; height: 256px;">
+                        </div>
+                        <div id="OpenLayers_Layer_Markers_20" dir="ltr" class="olLayerDiv" style="position: absolute; width: 100%; height: 100%; z-index: 330;">
+                                <div id="OL_Icon_22" style="position: absolute; width: 21px; height: 25px; left: 189.5px; top: 175px;">
+                                        <img id="OL_Icon_22_innerImage" class="olAlphaImg" src="./OL_files/marker.png" style="position: relative; width: 21px; height: 25px;">
+                                </div>
+                        </div>
+                </div>
+                <div id="OpenLayers_Control_Zoom_5" class="olControlZoom olControlNoSelect" unselectable="on" style="position: absolute; z-index: 1004;">
+                        <a href="https://bytes.usc.edu/cs585/f23-Da-taaa/hw/HW3/OL/OL.html#zoomIn" class="olControlZoomIn olButton">+</a>
+                        <a href="https://bytes.usc.edu/cs585/f23-Da-taaa/hw/HW3/OL/OL.html#zoomOut" class="olControlZoomOut olButton">&#8722;</a>
+                </div>
+                <div id="OpenLayers_Control_ArgParser_6" class="olControlArgParser olControlNoSelect" unselectable="on" style="position: absolute; z-index: 1004;"></div>
+                <div id="OpenLayers_Control_Attribution_7" class="olControlAttribution olControlNoSelect" unselectable="on" style="position: absolute; z-index: 1004;">
+                        � <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors
+                </div>
+        </div>
+</div> -->
+<div id="map"></div>
+
+
+<script>
+// your JS code 
+// console.log("Hola, all!");
+// alert("Hello JS World!");
+
+// my data is a label/ID for what we store, which is the object stored in variable d, 
+// whose value is {"k1":[{"a":5, "b":-6}]}, which consists of a key called k1 
+// with an array as its value: [{"a":5, "b":-6}]
+// var d = { "k1": [{ "a": 34.023, "b": -118.286 },{ "a": 34.019, "b": -118.287 },{ "a": 34.023, "b": -118.285 },{ "a": 34.022, "b": -118.285 },{ "a": 34.02, "b": -118.285 },{ "a": 34.022, "b": -118.283 },{ "a": 34.025, "b": -118.284 },{ "a": 34.025, "b": -118.285 },{ "a": 34.025, "b": -118.284 },{ "a": 34.02, "b": -118.283 },{ "a": 34.021, "b": -118.282 },{ "a": 34.021, "b": -118.283 },{ "a": 34.027, "b": -118.288 }] };
+var d = { "k1": [{ "a": 34.023, "b": -118.286 }], "k2": [{ "a": 34.019, "b": -118.287 }], "k3": [{ "a": 34.023, "b": -118.285 }], "k4": [{ "a": 34.022, "b": -118.285 }], "k5": [{ "a": 34.02, "b": -118.285 }], "k6": [{ "a": 34.022, "b": -118.283 }], "k7": [{ "a": 34.025, "b": -118.284 }], "k8": [{ "a": 34.025, "b": -118.285 }], "k9": [{ "a": 34.025, "b": -118.284 }], "k10": [{ "a": 34.02, "b": -118.283 }], "k11": [{ "a": 34.021, "b": -118.282 }], "k12": [{ "a": 34.021, "b": -118.283 }], "k13": [{ "a": 34.027, "b": -118.288 }] };
+localStorage.setItem("myData",JSON.stringify(d));
+// you'd need to modify the above, to store all your points
+
+
+//next [presumably after closing the browser, and reloading our html]
+// we can fetch the stored data, just by supplying its key:
+var dataStored = JSON.parse(localStorage.getItem("myData"));
+// verify that we fetched our data correctly
+// console.log(dataStored); 
+// we can iterate through our array [of points], like so:
+var a = dataStored.k1; // a will contain our array
+for(var indx in a) { // indx is 0,1,2...
+//   console.log(a[indx]); // this could be a single point
+}
+
+// here's how to plot points on a map, using OpenLayers:
+// [this is code I mildly modified, from an existing source]
+function initMap() {
+        map = new OpenLayers.Map('map');
+        basemap = new OpenLayers.Layer.OSM("Simple OSM Map");
+        map.addLayer(basemap);
+        markers = new OpenLayers.Layer.Markers("Markers");
+        map.addLayer(markers);
+}// initMap()
+
+function addMarker(latitude, longitude) {
+        var lonLat = new OpenLayers.LonLat(longitude, latitude)
+            .transform(
+                new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
+                map.getProjectionObject() // to Spherical Mercator Projection
+        );
+        var point = new OpenLayers.Marker(lonLat);
+        markers.addMarker(point);
+        map.setCenter(lonLat, 8); // second arg is zoom level
+        //console.log(latitude + ", " + longitude);
+}// addMarker()
+
+
+// load and setup map layers
+initMap();
+
+// markers
+coordinates = JSON.parse(localStorage.getItem("myData"));
+for (let c in coordinates) addMarker(coordinates[c][0]['a'], coordinates[c][0]['b']);
+
+</script>
+
+
+
+</body></html>
